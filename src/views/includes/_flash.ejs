@@ -1,0 +1,60 @@
+<% if (errors.length > 0) { %>
+ 
+    <div class="toast active">
+
+        <div class="toast-content">
+            <i class="fa-solid fa-bomb check"></i>
+
+            <div class="message">
+                <span class="text text-1">Danger</span>
+
+                <span class="text text-2">
+
+                    <% errors.forEach(error => { %>
+            
+                        <%= error %> <br> 
+        
+                    <% }) %>
+                
+                </span>
+            </div>
+        </div>
+
+        <i class="fa-solid fa-xmark close"></i>
+
+        <div class="progress active"></div>
+
+    </div>
+
+<% } %>
+
+
+<% if (success.length > 0) { %>
+
+    <div class="toast success active">
+
+        <div class="toast-content">
+            <i class="fas fa-solid fa-check check"></i>
+
+            <div class="message">
+                <span class="text text-1">Sucess</span>
+
+                <span class="text text-2">
+
+                    <% success.forEach(success => { %>
+            
+                        <%= success %> <br> 
+        
+                    <% }) %>
+                
+                </span>
+            </div>
+        </div>
+
+        <i class="fa-solid fa-xmark close"></i>
+
+        <div class="progress active"></div>
+
+    </div>
+
+<% } %>

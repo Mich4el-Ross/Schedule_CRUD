@@ -1,0 +1,78 @@
+<!-- INCLUDE HEADER AREA -->
+    <%- include('includes/_header') %>
+<!-- INCLUDE HEADER AREA -->
+
+    <!-- INCLUDE HEADER AREA -->
+        <%- include('includes/_flash') %>
+    <!-- INCLUDE HEADER AREA -->
+
+    <main id="main-section">
+        <div class="container">
+        
+            <div class="forms-block"> 
+
+                <div class="div1">
+                    <h2 class="text-dark">Create Account</h2>
+
+                    <form action="/account/signup" method="POST" id="add_user">
+
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+                        <div class="new_user">
+    
+                            <div class="form-group">
+                                <label for="name" class="text-light">Email</label>
+                                <input type="email" name="email" placeholder="example@gmail.com">
+                            </div>
+            
+                            <div class="form-group">
+                                <label for="Email" class="text-light">Password</label>
+                                <input type="password" name="password">
+                            </div>
+            
+                            <div class="form-group">
+                                <button type="submit" class="btn text-dark update">Create account</button>
+                            </div>
+                    
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="line-divisor"></div>
+
+                <div class="div2">
+                    <h2 class="text-dark">Log in</h2>
+
+                    <form action="/account/signin" method="POST" id="add_user">
+
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+                        <div class="new_user">
+            
+                            <div class="form-group">
+                                <label for="name" class="text-light">Email</label>
+                                <input type="email" name="email" placeholder="example@gmail.com">
+                            </div>
+            
+                            <div class="form-group">
+                                <label for="Email" class="text-light">Password</label>
+                                <input type="password" name="password">
+                            </div>
+            
+                            <div class="form-group">
+                                <button type="submit" class="btn text-dark update">Log in</button>
+                            </div>
+                    
+                        </div>
+                    </form>
+        
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+<!-- INCLUDE FOOTER AREA -->
+    <%- include('includes/_footer') %>
+<!-- INCLUDE FOOTER AREA -->

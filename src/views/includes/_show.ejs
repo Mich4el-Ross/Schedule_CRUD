@@ -1,0 +1,23 @@
+<% users.forEach(user => { %>
+    
+    <tr>
+        <td> <%= user.name %>  </td>
+
+        <td> <% if (!user.middlename) { %> - <% } %> <%= user.middlename %> </td>
+
+        <td> <% if (!user.email) { %> - <% } %> <%= user.email %> </td>
+
+        <td> <%= user.gender %>  </td>
+
+        <td> <% if (!user.phonenumber) { %> - <% } %> <%= user.phonenumber %> </td>
+
+        <td> <%= user.createdOn.toLocaleDateString() %> </td>
+
+        <td> 
+            <a href='/add-user/index/<%= user._id  %>' style='text-decoration: none; color: #fff; background-color: #ff6505; padding: 3px; border-radius: 5px;'>Edit</a> 
+            
+            <a href='/add-user/delete/<%= user._id %>' style='text-decoration: none; color: #fff; background-color: #ff0e00; padding: 3px; border-radius: 5px;'>Delete</a> 
+        </td>
+    </tr>
+
+<% }) %>
