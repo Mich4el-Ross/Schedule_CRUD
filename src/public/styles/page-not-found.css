@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    background-color: #333350;
+    color: #ffffff;
+}
+
+
+.container {
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.imgBox {
+    width: 50%;
+    height: auto;
+    
+    display: flex;
+    margin-left: 50px;
+    justify-content: center;
+}
+
+.imgBox img {
+    width: 450px;
+    height: auto;
+}
+
+.textBox {
+    margin-left: 25px;
+    width: 50%;
+}
+
+.textBox h1 {
+    font-size: 200px;
+}
+
+.textBox h3 {
+    font-size: 50px;
+}
+
+.textBox p {
+    max-width: 70%;
+    font-size: 20px;
+}
+
+
+button {
+    background: transparent;
+    width: 150px;
+    height: 35px;
+    border: 2px solid #6C63FF;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    
+    box-shadow: inset 0 0 0 0 #6C63FF;
+
+    transition: ease-out .3s;
+}
+
+button:hover {
+    color: #FFFFFF;
+    box-shadow: inset 150px 0 0 0 #6C63FF;
+
+    transition: .3s ease-in-out;
+}
+
+@media only screen and (max-width: 900px) {
+    
+    .container {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+        overflow-y: scroll;
+    }
+    
+    .imgBox {
+        width: 90%;
+        height: auto;
+    }
+    
+    .imgBox img {
+        width: 60%;
+        height: auto;
+    }
+    
+    .textBox {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .textBox h1 {
+        font-size: 20vw;
+    }
+    
+    .textBox h3 {
+        font-size: 7vw;
+    }
+    
+    .textBox p {
+        width: 90%;
+        margin: auto;
+        font-size: 4vw;
+    }
+
+}
